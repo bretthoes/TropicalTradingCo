@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home | Tropical Trading Co.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logos/Palm_Icon_Black_Small.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="styles/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+</head>
+
+<body>
+    <!-- Icon logo container -->
+    <div class="container-fluid"><img src="img/logos/Palm_Icon_Black_Small.png" class="center-image" />
+    </div>
+    <!-- Icon logo container end -->
+
+    <!-- Text logo, navbar, and search container -->
+    <div class="container-fluid main-header">
+        <div class="row justify-content-center">
+            <div class="col-sm-4-auto">
+                <div class="justify-content-right">
+                    <span class="logo-text">
+                        <a href="#">Tropical Trading Co.</a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-4-auto">
+                <ul class="nav justify-content-center" id="main-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" id="nav-home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" id="nav-blog">Blog</a>
+                    </li>
+                    <li class="nav-item" id="mobile-dropdown-li">
+                        <a class="nav-link" id="mobile-dropdown-link">
+                            <i class="fa fa-bars" id="mobile-dropdown-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- mobile overlay nav -->
+                <ul class="nav justify-content-center overlay" id="overlay-nav">
+                    <a class="overlay-close-button">&times;</a>
+                    <div class="overlay-content">
+                        <a href="index.html">Home</a>
+                        <a href="aboutus.html">About Us</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </ul>
+                <!-- mobile overlay nav end -->
+            </div>
+            <div class="col-sm-4-auto no-transition" id="search-wrapper">
+                <input id="search" placeholder="What are you looking for?" type="text">
+            </div>
+        </div>
+    </div>
+    <!-- Text logo, navbar, and search container end -->
+
+    <!-- Hero image container-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hero-content">
+                <img src="img/logos/since_2019_logo.png" class="center-image" />
+                <h1 id="hero-image-logo-text">Tropical Trading Co.</h1>
+                <p>Florida <img src="img/icons/truck.png">
+                    Ontario</p>
+                <button id="hero-button">contact us</button>
+            </div>
+        </div>
+    </div>
+    <!-- Hero image container end -->
+
+    <!-- Featured Products container -->
+    <div class="container-fluid">
+        <h1 class="section-title-dark-text">Featured Products</h2>
+            <div class="row">
+                <div class="col">
+                    <img src="img/transparent/8_ Monstera.png" class="center-image-transparent">
+                    <div class="featured-products-image-content">
+                        <p>Monstera</p>
+                        <div class="featured-products-separator"></div>
+                        <form action="gallery.html"><button type="submit">See Gallery</button></form>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/transparent/10_ Alocasia.png"
+                        class="center-image-transparent featured-products-image">
+                    <div class="featured-products-image-content">
+                        <p>Alocasia</p>
+                        <div class="featured-products-separator"></div>
+                        <form action="gallery.html"><button type="submit">See Gallery</button></form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Featured Products container end -->
+
+    <!-- Gallery container -->
+    <div class="container-fluid section-container-dark center-text">
+        <h1 class="section-title-white-text">Gallery</h1>
+        <form action="gallery.html"><button class="dark-button-theme" type="submit">View</button></form>
+
+        <div id="myCarousel" class="carousel slide w-100 row mx-auto my-auto" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox" id="carouselContainer">
+                <!-- indexGalleryPlants in gallery.js -->
+            </div>
+            <a class="carousel-control-prev w-auto" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next w-auto" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div id="overlay-home-gallery">
+        <a class="overlay-close-button">&times;</a>
+        <a class="overlay-download-button"><img src="img/icons/download.svg"></a>
+        <a class="overlay-share-button"><img src="img/icons/share.svg"></a>
+        <img id="preview-img-home-gallery" src="" class="center-image">
+        <h2 id="preview-title-home-gallery" class="center-text"></h2>
+    </div>
+    <!-- Gallery container end -->
+
+    <!-- About Us container -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 col-sm-12 about-us-left">
+                <h1 class="section-title-dark-text">About us</h1>
+                <div>
+                    <img src="img/icons/truck_icon.png" class="center-image">
+                    <p class="center-text">Tropical Trading Co. is a small business dedicated to delivering Canada the
+                        best
+                        quality tropical
+                        foliage from Florida, year round.</p>
+                </div>
+                <div>
+                    <img src="img/icons/handshake_icon.png" class="center-image">
+                    <p class="center-text">We have something for both individual garden centres and large retailers.</p>
+
+                </div>
+                <div>
+                    <img src="img/icons/flower_icon.png" class="center-image">
+                    <p class="center-text">We look for 3 attributes when choosing plants: Quality, Adaptability, and
+                        Sustainability.</p>
+                </div>
+            </div>
+            <div class="col-md-5" id="about-us-right">
+            </div>
+        </div>
+    </div>
+    <!-- About Us container end -->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small pt-4">
+        <div class="container-fluid text-center text-md-left footer-container">
+            <div class="row">
+                <div class="col-md-2 mb-md-0 mb-2">
+                </div>
+                <div class="col-md-4 mt-md-0 mt-3">
+                    <h6 class="footer-logo-text">
+                        Tropical Trading Co.</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            Best quality tropical foliage from Florida, year round.
+                        </li>
+                        <li>
+                            1222 Norfolk County Road 19 East
+                        </li>
+                        <li>
+                            Wilsonville, ON Canada
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-2 mb-md-0 mb-2">
+                    <h6 class="text-uppercase">Our Contacts</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            Tropical Trading Co.
+                        </li>
+                        <li>
+                            fred@tropicaltradingco.com
+                        </li>
+                        <li>
+                            1.519.771.1285
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-md-0 mb-2 transition" id="footer-email-form">
+                    <h6 class="text-uppercase">Get Weeky Updates</h6>
+                    <label for="footer-email-input">Join our weekly availability list</label>
+                    <div class="input-group mb-3">
+                        <input id="footer-email-input" type="email" class="form-control bg-dark" placeholder="Email"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-light footer-button" type="button"
+                                onclick="emailSubmitted()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-md-0 mb-2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright
+            <a href="#"> Tropical Trading Co.</a>
+        </div>
+        <!-- Copyright end -->
+
+    </footer>
+    <!-- Footer end -->
+
+
+    <!-- JQuery Scripts -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <!-- Bootstrap Scripts -->
+    <script src="styles/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+    <!-- Main native -->
+    <script src="js/main.js"></script>
+    <!-- Main jquery -->
+    <script src="js/jquery.js"></script>
+</body>
+
+</html>
