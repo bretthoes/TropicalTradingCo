@@ -62,7 +62,7 @@ function injectIndexGallery(container, array){
         itemBreakpoints.appendChild(itemImage);
         
         // Finally, add parent container to carousel
-        carouselContainer.appendChild(itemWrapper);
+        container.appendChild(itemWrapper);
     }
 }
 
