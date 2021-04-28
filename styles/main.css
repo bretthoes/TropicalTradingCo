@@ -1868,6 +1868,10 @@ select {
   font-weight: 200;
 }
 
+.featured-products-image-content button:hover {
+  background-color: rgba(18, 49, 50, 0.7);
+}
+
 #hero-button:hover {
   background-color: #123132;
   color: white;
@@ -1880,10 +1884,6 @@ select {
   margin-bottom: 20px;
   border-bottom: 5px solid #123132;
   display: block;
-}
-
-.featured-products-image-content button:hover {
-  background-color: rgba(18, 49, 50, 0.7);
 }
 
 /*********************************************************************/
@@ -2009,11 +2009,60 @@ select {
 }
 
 /* End of Carousel Styles*/
+.carousel-item div p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.carousel-item div button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 60%;
+  left: 20%;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  padding: 6px 33px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  font-size: 15px;
+  width: 55%;
+  font-weight: 300;
+  opacity: 0;
+}
+
 .carousel-item div:hover {
   cursor: pointer;
   background-color: rgba(236, 236, 236, 0.2);
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.carousel-item div:hover img {
+  opacity: 0.5;
+}
+
+.carousel-item div:hover p,
+.carousel-item div:hover button {
+  opacity: 1;
 }
 
 /*********************************************************************/

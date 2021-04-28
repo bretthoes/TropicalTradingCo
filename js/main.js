@@ -60,6 +60,15 @@ function injectIndexGallery(container, array){
         itemImage.alt = array[i].name;
         itemImage.classList.add('img-fluid');
         itemBreakpoints.appendChild(itemImage);
+
+        const itemTitle = document.createElement('p');
+        itemTitle.innerHTML = array[i].name.trim();
+
+        const viewButton = document.createElement('button');
+        viewButton.innerHTML = 'View';
+        itemBreakpoints.appendChild(viewButton);
+
+        itemBreakpoints.appendChild(itemTitle);
         
         // Finally, add parent container to carousel
         container.appendChild(itemWrapper);

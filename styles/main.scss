@@ -28,6 +28,15 @@ $container-max-widths: (sm: 540px,
 // @import "../styles/bootstrap-4.0.0/scss/code";
 @import "../styles/bootstrap-4.0.0/scss/grid";
 
+// Mixins
+@mixin centered-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
 /*********************************************************************/
 /* Scss variables */
 /*********************************************************************/
@@ -563,6 +572,10 @@ select {
     width: 240px;
     font-weight: 200;
 }
+.featured-products-image-content button:hover {
+
+    background-color: rgba(18, 49, 50, 0.7);
+}
 
 #hero-button:hover {
     background-color: $base-color;
@@ -578,10 +591,7 @@ select {
     display: block;
 }
 
-.featured-products-image-content button:hover {
 
-    background-color: rgba(18, 49, 50, 0.7);
-}
 
 
 
@@ -710,11 +720,56 @@ select {
 
 /* End of Carousel Styles*/
 
+.carousel-item div {
+
+    p {
+        @include centered-absolute();
+        opacity: 0;
+        color:white;
+        font-size: 24px;
+        font-weight: 400;
+        font-family: $base-font;
+        transition: 0.5s ease;
+    }
+
+    button {
+        @include centered-absolute();
+        top: 60%;
+        left:20%;
+        transform: translateY(-60%);
+        font-family: $base-font;
+        text-transform: uppercase;
+        padding: 6px 33px;
+        color: white;
+        background-color: transparent;
+        border: 1px solid white;
+        transition: 0.5s ease;
+        cursor: pointer;
+        font-size: 15px;
+        width: 55%;
+        font-weight: 300;
+        opacity: 0;
+    }
+    // .featured-products-image-content button:hover {
+    
+    //     background-color: rgba(18, 49, 50, 0.7);
+    // }
+}
+
 .carousel-item div:hover {
     cursor: pointer;
     background-color: rgba(236, 236, 236, 0.2);
     transition: 0.5s ease;
+    img {
+        opacity: 0.5;
+    }
+
+    p,
+    button {
+        opacity: 1;
+    }
 }
+
 
 /*********************************************************************/
 /* About Us Styles */
@@ -988,11 +1043,13 @@ footer {
     div {
         max-width: 442px;
         cursor: pointer;
-        
-    transition: 0.5s ease;
+
+        transition: 0.5s ease;
     }
-    div:hover{
-        background-color:  rgba(18, 49, 50, 0.3);
+
+    div:hover {
+        background-color: rgba(18, 49, 50, 0.3);
+
         span {
             padding: 0;
             font-family: $base-font;
@@ -1010,7 +1067,8 @@ footer {
     span {
         padding: 12px;
     }
-    h4{
+
+    h4 {
         font-family: $base-font;
         font-style: italic;
         font-weight: 300;
