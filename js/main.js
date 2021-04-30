@@ -79,6 +79,14 @@ if (document.getElementById('carouselContainer')){
     let carouselContainer = document.getElementById("carouselContainer");
     injectIndexGallery(carouselContainer,indexGalleryPlants);
 }
+if (document.getElementById('6InchTropicalCarousel')){
+    let carouselContainer = document.getElementById("6InchTropicalCarousel");
+    injectIndexGallery(carouselContainer,indexGalleryPlants);
+}
+if (document.getElementById('8InchTropicalCarousel')){
+    let carouselContainer = document.getElementById("8InchTropicalCarousel");
+    injectIndexGallery(carouselContainer,indexGalleryPlants);
+}
 
 
 

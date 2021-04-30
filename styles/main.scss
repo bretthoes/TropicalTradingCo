@@ -34,7 +34,7 @@ $container-max-widths: (sm: 540px,
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
 
 
 /*********************************************************************/
@@ -572,6 +572,7 @@ select {
     width: 240px;
     font-weight: 200;
 }
+
 .featured-products-image-content button:hover {
 
     background-color: rgba(18, 49, 50, 0.7);
@@ -604,6 +605,22 @@ select {
 .carousel-control-prev,
 .carousel-control-next {
     width: fit-content;
+}
+
+.light-carousel-link {
+    .carousel-control-next-icon:after {
+        content: '>';
+        font-size: 44px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .carousel-control-prev-icon:after {
+        content: '<';
+        font-size: 44px;
+        font-weight: bold;
+        color: black;
+    }
 }
 
 /* small = display 1 */
@@ -725,7 +742,7 @@ select {
     p {
         @include centered-absolute();
         opacity: 0;
-        color:white;
+        color: white;
         font-size: 24px;
         font-weight: 400;
         font-family: $base-font;
@@ -735,7 +752,7 @@ select {
     button {
         @include centered-absolute();
         top: 60%;
-        left:20%;
+        left: 20%;
         transform: translateY(-60%);
         font-family: $base-font;
         text-transform: uppercase;
@@ -750,16 +767,18 @@ select {
         font-weight: 300;
         opacity: 0;
     }
+
     // .featured-products-image-content button:hover {
-    
+
     //     background-color: rgba(18, 49, 50, 0.7);
     // }
 }
 
-.carousel-item div:hover {
+.carousel-dark .carousel-item div:hover {
     cursor: pointer;
     background-color: rgba(236, 236, 236, 0.2);
     transition: 0.5s ease;
+
     img {
         opacity: 0.5;
     }
@@ -770,6 +789,26 @@ select {
     }
 }
 
+.carousel-light {
+    a {
+        color: rgb(18, 49, 50);
+    }
+}
+
+.carousel-light .carousel-item div:hover {
+    cursor: pointer;
+    background-color: rgba(18, 49, 50, 0.5);
+    transition: 0.5s ease;
+
+    img {
+        opacity: 0.5;
+    }
+
+    p,
+    button {
+        opacity: 1;
+    }
+}
 
 /*********************************************************************/
 /* About Us Styles */
